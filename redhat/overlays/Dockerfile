@@ -1,4 +1,4 @@
-#Build stage
+# Build stage
 FROM registry.access.redhat.com/ubi9/go-toolset@sha256:52ab391730a63945f61d93e8c913db4cc7a96f200de909cd525e2632055d9fa6 AS build-env
 
 LABEL description="Cosign is a container signing tool that leverages simple, secure, and auditable signatures based on simple primitives and best practices."
@@ -13,8 +13,8 @@ USER root
 RUN git config --global --add safe.directory /cosign
 RUN make cosign
 
-#Install Cosign
-FROM registry.access.redhat.com/ubi8/ubi-minimal:latest
+# Install Cosign
+FROM registry.access.redhat.com/ubi9/ubi-minimal@sha256:0dfa71a7ec2caf445e7ac6b7422ae67f3518960bd6dbf62a7b77fa7a6cfc02b1
 COPY --from=build-env /cosign/cosign /usr/local/bin/cosign
 RUN chown root:0 /usr/local/bin/cosign && chmod g+wx /usr/local/bin/cosign
 
