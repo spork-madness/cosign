@@ -10,7 +10,7 @@ jobs:
     uses: securesign/actions/.github/workflows/check-image-version.yaml@main
     strategy:
       matrix:
-        branch: [main, midstream-v2.1.1, midstream-v2.2.0]
+        branch: [main, redhat-v2.2]
     with:
       branch: ${{ matrix.branch }}
     secrets:
