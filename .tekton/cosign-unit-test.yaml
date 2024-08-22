@@ -9,7 +9,7 @@ spec:
     - name: source
   steps:
     - name: run-tests
-      image: registry.access.redhat.com/ubi9/go-toolset@sha256:c3a9c5c7fb226f6efcec2424dd30c38f652156040b490c9eca5ac5b61d8dc3ca
+      image: registry.access.redhat.com/ubi9/go-toolset@sha256:9117a23423cc18eeb14e43221b61bbeafa0e6c364166514553241365eaf6b083
       workingDir: $(workspaces.source.path)/source
       script: |
         #!/usr/bin/env sh
