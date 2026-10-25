@@ -53,4 +53,4 @@ git remote add upstream git@github.com/sigstore/cosign.git
 # Run the update script
 ./redhat/release/update-to-head.sh v2.1.1
 ```
-This should create the `redhat-v2.1.1` branch as well as a test branch at `redhat-v2.1.1-ci`, create a pull request, and initiate OpenShift CI.
+This should create the `redhat-v2.1.1` branch as well as a test branch at `redhat-v2.1.1-ci`, create a pull request, and initiate OpenShift CI.# Test nudge at Sun Oct 25 01:39:45 PM IST 2026
